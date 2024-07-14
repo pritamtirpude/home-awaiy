@@ -6,7 +6,7 @@ import { icon } from "leaflet";
 
 import { findCountryByCode } from "@/utils/countries";
 import CountryFlagAndName from "../card/country-flag-and-name";
-import Title from "./Title";
+import Title from "./title";
 
 const iconUrl =
   "https://unpkg.com/leaflet@1.9.3/dist/images/marker-icon-2x.png";

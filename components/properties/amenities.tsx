@@ -1,6 +1,6 @@
 import { Amenity } from "@/utils/amenities";
 import { LuFolderCheck } from "react-icons/lu";
-import Title from "./Title";
+import Title from "./title";
 
 function Amenities({ amenities }: { amenities: string }) {
   const amenitiesList: Amenity[] = JSON.parse(amenities as string);
