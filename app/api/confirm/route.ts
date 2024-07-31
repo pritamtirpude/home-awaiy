@@ -6,10 +6,10 @@ const stripe = new Stripe(process.env.STRIPE_SECRET_KEY as string);
 
 export const GET = async (req: NextRequest) => {
   const { searchParams } = new URL(req.url);
-  const session_id = searchParams.get("session_id") as string;
+  const sessionId = searchParams.get("session_id") as string;
 
   try {
-    const session = await stripe.checkout.sessions.retrieve(session_id);
+    const session = await stripe.checkout.sessions.retrieve(sessionId);
     const bookingId = session.metadata?.bookingId;
     if (session.status !== "complete" || !bookingId) {
       throw new Error("Something went wrong");
